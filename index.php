@@ -28,7 +28,6 @@ if ($_GET["url"] != null) {
 	$pageHTML = new Spring($response['content']);
 	# Get a hash of HTML elements [Element, Count]
 	echo("<div class='tag_cloud'>\n");
-	//$elements = html_parse_get_element_counts($response['content']);
 	$elements = $pageHTML->getElementCounts();
 	foreach ($elements as $tag => $count) {
 		echo("<span class='tags' id='$tag'>" . htmlspecialchars($tag) . " :: " . htmlspecialchars($count) . "</span>\n");
@@ -38,8 +37,6 @@ if ($_GET["url"] != null) {
 
 	# Display the HTML source
 	echo("<div class='html_source'>\n");
-
-	//echo(html_display_basic(htmlspecialchars($response['content']), $elements));
 	echo($pageHTML->display());
 	echo("\n</div>\n");
 
