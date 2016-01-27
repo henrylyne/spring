@@ -1,0 +1,21 @@
+
+.tags {
+	background-color: #eee;
+	margin: 2px;
+	padding: 2px;
+	border: 1px solid #000;
+	font-weight: bold;
+}
+
+.tag_cloud {
+	padding: 2px 0px 2px 0px;
+}
+
+.html_source {
+	background-color: #ddd;
+	margin: 4px 20px 20px 0px;
+}
+
+.tag_high {
+	background-color: #5c5;
+}
