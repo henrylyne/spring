@@ -3,10 +3,11 @@
 include 'lib/curl.php';
 require_once('class/Spring.php');
 
+include "include/header.html";
+
 # If we have a URL to fetch
 if ($_GET["url"] != null) {
 
-	include "include/header.html";
 
 	# Don't allow the hosting site to be called, to avoid an endless loop.
 	$pos = strpos($_GET["url"], $_SERVER['HTTP_HOST']);
@@ -40,10 +41,13 @@ if ($_GET["url"] != null) {
 	echo($pageHTML->display());
 	echo("\n</div>\n");
 
-	include "include/footer.html";
-	
-# No URL, redirect to home page
+
+# No URL, display form
 } else {
-	header('Location: index.html');
+
+	echo('<h1>Spring > View the source</h1>');
+	echo("<form method='GET' action='index.php'><input type='text' name='url' value='http://twistedo.com'><input type='submit' value='View the Source'></form>");
 }
+
+include "include/footer.html";
 ?>
