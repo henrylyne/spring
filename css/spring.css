@@ -2,9 +2,12 @@
 .tags {
 	background-color: #eee;
 	margin: 2px;
-	padding: 2px;
+	padding: 4px;
 	border: 1px solid #000;
 	font-weight: bold;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 8px;
 }
 
 .tag_cloud {
